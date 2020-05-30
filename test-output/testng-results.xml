@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="13141" started-at="2020-05-30T14:43:32 EDT" finished-at="2020-05-30T14:43:46 EDT">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.emptyUsernameLogin()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="emptyUsernameLogin" class="com.hrms.testcases.LoginTest"/>
+        <method signature="LoginTest.invalidPasswordLogin()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="invalidPasswordLogin" class="com.hrms.testcases.LoginTest"/>
+      </group> <!-- regression -->
+    </groups>
+    <test name="Regression Test" duration-ms="13141" started-at="2020-05-30T14:43:32 EDT" finished-at="2020-05-30T14:43:46 EDT">
+      <class name="com.hrms.testcases.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="setUp" is-config="true" duration-ms="5420" started-at="2020-05-30T14:43:33 EDT" finished-at="2020-05-30T14:43:38 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="emptyUsernameLogin()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="emptyUsernameLogin" duration-ms="403" started-at="2020-05-30T14:43:38 EDT" finished-at="2020-05-30T14:43:38 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyUsernameLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="tearDown" is-config="true" duration-ms="727" started-at="2020-05-30T14:43:38 EDT" finished-at="2020-05-30T14:43:39 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="setUp" is-config="true" duration-ms="4472" started-at="2020-05-30T14:43:39 EDT" finished-at="2020-05-30T14:43:44 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="invalidPasswordLogin()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="invalidPasswordLogin" duration-ms="1237" started-at="2020-05-30T14:43:44 EDT" finished-at="2020-05-30T14:43:45 EDT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message text is not matched expected [Invalid credential] but found [Invalid credentials]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message text is not matched expected [Invalid credential] but found [Invalid credentials]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.hrms.testcases.LoginTest.invalidPasswordLogin(LoginTest.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPasswordLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hrms.testcases.LoginTest@1b68ddbd]" name="tearDown" is-config="true" duration-ms="818" started-at="2020-05-30T14:43:45 EDT" finished-at="2020-05-30T14:43:46 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrms.testcases.LoginTest -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- Regression Suite -->
+</testng-results>
