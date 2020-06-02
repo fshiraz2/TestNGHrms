@@ -7,19 +7,46 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.hrms.utils.ConfigsReader;
 import com.hrms.utils.Constants;
 
 public class BaseClass {
 
 	public static WebDriver driver;
+	public static ExtentHtmlReporter htmlReport;
+	public static ExtentReports report;
+	public static ExtentTest test;
+
+	@BeforeTest(alwaysRun = true)
+	public void generateReport() { 
+
+		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);//in configs folder
+
+		htmlReport = new ExtentHtmlReporter(Constants.REPORT_FILEPATH);
+		htmlReport.config().setDocumentTitle(ConfigsReader.getProperty("reportTitle"));
+		htmlReport.config().setReportName(ConfigsReader.getProperty("reportName"));
+		htmlReport.config().setTheme(Theme.DARK);
+
+		report = new ExtentReports();
+		report.attachReporter(htmlReport);
+	}
+
+	@AfterTest(alwaysRun = true)
+	public void writeReport() {
+		report.flush();
+	}
 
 	@BeforeMethod(alwaysRun = true) // to make this method run before every @Test method
 	public static WebDriver setUp() {
 
-		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
 
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {

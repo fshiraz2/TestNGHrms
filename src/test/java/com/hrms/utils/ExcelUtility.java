@@ -1,5 +1,6 @@
 package com.hrms.utils;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -48,9 +49,9 @@ public class ExcelUtility {
 
 		// iterating rows
 		for (int i = 1; i < rows; i++) {
-
 			// iterating cols
 			for (int j = 0; j < cols; j++) {
+				//storing values into 2D array 
 				data[i - 1][j] = cellData(i, j);
 			}
 		}

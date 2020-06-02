@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 30 14:43:32 EDT 2020</td>
+<td>Started on:</td><td>Mon Jun 01 21:00:41 EDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13141 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (188 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>regression </td>
 </tr><tr>
@@ -67,34 +67,31 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.hrms.testcases.LoginTest.invalidPasswordLogin()'><b>invalidPasswordLogin</b><br>Test class: com.hrms.testcases.LoginTest</td>
-<td><div><pre>java.lang.AssertionError: Error message text is not matched expected [Invalid credential] but found [Invalid credentials]
-	at com.hrms.testcases.LoginTest.invalidPasswordLogin(LoginTest.java:34)
+<td title='com.hrms.testcases.AddEmployeeTest.addEmployee()'><b>addEmployee</b><br>Test class: com.hrms.testcases.AddEmployeeTest</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
 	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace279566689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace279566689'><pre>java.lang.AssertionError: Error message text is not matched expected [Invalid credential] but found [Invalid credentials]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at com.hrms.testcases.LoginTest.invalidPasswordLogin(LoginTest.java:34)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+Caused by: java.lang.NullPointerException
+	at com.hrms.utils.ExcelUtility.loadSheet(ExcelUtility.java:25)
+	at com.hrms.utils.ExcelUtility.excelIntoArray(ExcelUtility.java:43)
+	at com.hrms.testcases.AddEmployeeTest.getData2(AddEmployeeTest.java:62)
+	... 25 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace521960438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace521960438'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:801)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -114,22 +111,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at com.hrms.utils.ExcelUtility.loadSheet(ExcelUtility.java:25)
+	at com.hrms.utils.ExcelUtility.excelIntoArray(ExcelUtility.java:43)
+	at com.hrms.testcases.AddEmployeeTest.getData2(AddEmployeeTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)
+	... 25 more
 </pre></div></td>
-<td>1</td>
-<td>com.hrms.testcases.LoginTest@1b68ddbd</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.hrms.testcases.LoginTest.emptyUsernameLogin()'><b>emptyUsernameLogin</b><br>Test class: com.hrms.testcases.LoginTest</td>
-<td></td>
 <td>0</td>
-<td>com.hrms.testcases.LoginTest@1b68ddbd</td></tr>
+<td>com.hrms.testcases.AddEmployeeTest@30a3107a</td></tr>
 </table><p>
 </body>
 </html>

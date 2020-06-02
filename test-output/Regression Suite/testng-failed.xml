@@ -11,13 +11,15 @@
       </run>
     </groups>
     <classes>
-      <class name="com.hrms.testcases.LoginTest">
+      <class name="com.hrms.testcases.AddEmployeeTest">
         <methods>
-          <include name="invalidPasswordLogin"/>
+          <include name="generateReport"/>
+          <include name="addEmployee"/>
+          <include name="writeReport"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.hrms.testcases.LoginTest -->
+      </class> <!-- com.hrms.testcases.AddEmployeeTest -->
     </classes>
   </test> <!-- Regression Test(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->
